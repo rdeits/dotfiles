@@ -18,7 +18,7 @@ def link_file(script, dotname=nil)
 	if File.exist? dotfile
 		warn "~/#{dotname} already exists"
 	else
-		ln_s File.join('.config_files' script), dotfile
+		ln_s File.join('.config_files', script), dotfile
 	end
 end
 
