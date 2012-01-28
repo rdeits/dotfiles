@@ -12,14 +12,13 @@ end
 
 def link_file(script, dotname=nil)
 	if dotname == nil
-		dotfile = File.join(ENV['HOME'], ".#{script}")
-	else
-		dotfile = File.join(ENV['HOME'], dotname)
+		dotname = ".#{script}"
 	end
+	dotfile = File.join(ENV['HOME'], dotname)
 	if File.exist? dotfile
-		warn "~/.#{script} already exists"
+		warn "~/#{dotname} already exists"
 	else
-		ln_s script, dotfile
+		ln_s File.join('.config_files' script), dotfile
 	end
 end
 
