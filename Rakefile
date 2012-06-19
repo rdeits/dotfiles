@@ -1,6 +1,6 @@
 desc "Link files to their appropriate locations"
 task :link do
-	%w[inputrc screenrc tmux.conf gitconfig].each do |script|
+	%w[inputrc screenrc tmux.conf gitconfig vim].each do |script|
 		link_file(script)
 	end
 	if RUBY_PLATFORM.include? "darwin"
@@ -22,4 +22,11 @@ def link_file(script, dotname=nil)
 	end
 end
 
-task :default => [:link]
+task :install_vim do
+	Dir.chdir "vim"
+	sh "rake"
+	Dir.chdir ".."
+end
+
+task :default => [:link,
+				  :install_vim]
