@@ -1,6 +1,6 @@
 desc "Link files to their appropriate locations"
 task :link do
-	%w[inputrc screenrc].each do |script|
+	%w[inputrc screenrc tmux.conf].each do |script|
 		link_file(script)
 	end
 	if RUBY_PLATFORM.include? "darwin"
