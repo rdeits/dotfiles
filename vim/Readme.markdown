@@ -1,0 +1,28 @@
+Requirements
+============
+
+* git
+* ruby
+* rake
+* gvim or macvim
+* python (tested 2.7)
+* python rope
+* ropevim
+
+Installation
+============
+
+	git clone git://github.com/rdeits/rdeits-vim.git ~/.vim
+	cd ~/.vim
+	rake
+
+To install all the plugins, open up vim and then do:
+
+	:BundleInstall
+
+On Ubuntu, you must first do: 
+
+	sudo apt-get install git rake vim-gnome ruby1.8-dev python-rope
+
+You will also need to easy_install ropevim
+
