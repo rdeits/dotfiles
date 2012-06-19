@@ -1,6 +1,6 @@
 desc "Link files to their appropriate locations"
 task :link do
-	%w[inputrc screenrc tmux.conf].each do |script|
+	%w[inputrc screenrc tmux.conf gitconfig].each do |script|
 		link_file(script)
 	end
 	if RUBY_PLATFORM.include? "darwin"
@@ -18,7 +18,7 @@ def link_file(script, dotname=nil)
 	if File.exist? dotfile
 		warn "~/#{dotname} already exists"
 	else
-		ln_s File.join('.config_files', script), dotfile
+		ln_s File.join(File.dirname(__FILE__), script), dotfile
 	end
 end
 
