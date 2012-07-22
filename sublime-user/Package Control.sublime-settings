@@ -1,0 +1,25 @@
+{
+	"auto_upgrade_last_run": 1342981856,
+	"installed_packages":
+	[
+		"Git",
+		"LaTeXTools",
+		"OpenSearchResult",
+		"Package Control",
+		"SideBarEnhancements",
+		"sublime-text-2-open-with-vim",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"WrapCode"
+	],
+	"repositories":
+	[
+		"https://github.com/abrookins/WrapCode",
+		"https://github.com/abrookins/OpenSearchResult",
+		"https://github.com/rdeits/sublime-text-2-open-with-vim"
+	],
+	"repository_channels":
+	[
+		"https://sublime.wbond.net/repositories.json"
+	]
+}
