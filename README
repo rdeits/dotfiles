@@ -1,3 +1,0 @@
-git clone git@github.com:rdeits/config.git ~/.config_files
-cd ~/.config_files
-rake

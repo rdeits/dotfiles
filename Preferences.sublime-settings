@@ -1,0 +1,12 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"auto_match_enabled": false,
+	"color_scheme": "Packages/Color Scheme - Default/Dawn.tmTheme",
+	"detect_slow_plugins": false,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+	],
+	"open_files_in_new_window": false,
+	"word_wrap": true
+}
