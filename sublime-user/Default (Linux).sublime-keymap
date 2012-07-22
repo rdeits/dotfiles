@@ -1,5 +1,0 @@
-[
-	{ "keys": ["ctrl+j"], "command": "goto_python_definition" },
-	{ "keys": ["ctrl+alt+e"], "command": "open_with_gvim"},
-	{ "keys": ["ctrl+shift+alt+i"], "command": "open_with_vim" }
-]
