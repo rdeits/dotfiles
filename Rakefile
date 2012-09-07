@@ -5,8 +5,10 @@ task :link do
 	end
 	if RUBY_PLATFORM.include? "darwin"
 		link_file("bash_profile_mac", ".bash_profile")
+		link_file("sublime-config", "Library/Application Support/sublime text 2/packages/User")
 	elsif RUBY_PLATFORM.include? "linux"
 		link_file("bashrc_linux", ".bashrc")
+		link_file("sublime-config", ".config/sublime-text-2/Packages/User")
 	end
 end
 
