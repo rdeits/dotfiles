@@ -1,3 +1,8 @@
+require 'rake/clean'
+
+CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc'].pathmap("#{ENV['HOME']}/.%p")
+
+
 desc "Link files to their appropriate locations"
 task :link do
 	%w[inputrc screenrc tmux.conf gitconfig vim].each do |script|
