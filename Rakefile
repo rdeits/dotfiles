@@ -2,6 +2,11 @@ require 'rake/clean'
 
 CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc', 'zshrc'].pathmap("#{ENV['HOME']}/.%p")
 
+desc "Install oh-my-zsh from github"
+task :zsh do
+	sh "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh"
+end
+
 
 desc "Link files to their appropriate locations"
 task :link do
