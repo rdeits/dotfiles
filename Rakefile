@@ -1,11 +1,11 @@
 require 'rake/clean'
 
-CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc'].pathmap("#{ENV['HOME']}/.%p")
+CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc', 'zshrc'].pathmap("#{ENV['HOME']}/.%p")
 
 
 desc "Link files to their appropriate locations"
 task :link do
-	%w[inputrc screenrc tmux.conf gitconfig vim].each do |script|
+	%w[inputrc screenrc tmux.conf gitconfig vim zshrc].each do |script|
 		link_file(script)
 	end
 	if RUBY_PLATFORM.include? "darwin"
