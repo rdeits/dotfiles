@@ -42,5 +42,10 @@ task :install_vim do
 	Dir.chdir ".."
 end
 
+task :apt do
+	sh "sudo apt-get update"
+	sh "sudo apt-get install git rake vim-gnome curl tmux zsh"
+end
+
 task :default => [:link,
 				  :install_vim]
