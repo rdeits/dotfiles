@@ -89,9 +89,6 @@ export LC_CTYPE=en_US.UTF-8
 # Libraries for HDF5 file format
 # export LD_LIBRARY_PATH=/Users/rdeits/Library/hdf5-1.8.5-patch1-macosx64-static/bin:$LD_LIBRARY_PATH
 
-# ROS
-export ROS_OS_OVERRIDE=osxbrew:lion
-
 # RVM (ruby version manager)
 [[ -s "/Users/rdeits/.rvm/scripts/rvm" ]] && source "/Users/rdeits/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
