@@ -1,6 +1,6 @@
 require 'rake/clean'
 
-CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc', 'zshrc'].pathmap("#{ENV['HOME']}/.%p")
+CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc', 'zshrc', '/.config/sublime-text-2/Packages/User'].pathmap("#{ENV['HOME']}/.%p")
 
 desc "Install oh-my-zsh from github"
 task :zsh do
