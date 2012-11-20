@@ -13,6 +13,7 @@ task :link do
 	%w[inputrc screenrc tmux.conf gitconfig vim zshrc].each do |script|
 		link_file(script)
 	end
+	touch File.join(ENV['HOME'], '.local.zsh')
 	if RUBY_PLATFORM.include? "darwin"
 		link_file("bash_profile_mac", ".bash_profile")
 		link_file("sublime-config", "Library/Application Support/sublime text 2/packages/User")
