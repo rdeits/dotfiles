@@ -27,14 +27,14 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-unsetopt correctall
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+unsetopt correctall
 
 # Customize to your needs...
 
@@ -74,6 +74,7 @@ export PYTHONPATH="/Users/rdeits/Dropbox/RoboClam/Software/python:$PYTHONPATH"
 export PYTHONPATH="/Users/rdeits/Dropbox/RoboClam/py:${PYTHONPATH}"
 export PYTHONPATH="/Users/rdeits/Documents/Scripting:${PYTHONPATH}"
 export PYTHONPATH="/Users/rdeits/Projects/ScratchHolograms:${PYTHONPATH}"
+export PYTHONPATH="/Users/rdeits/Projects/Cryptics:${PYTHONPATH}"
 
 ############################# Other Programs #############################
 
@@ -89,9 +90,6 @@ export LC_CTYPE=en_US.UTF-8
 # Libraries for HDF5 file format
 # export LD_LIBRARY_PATH=/Users/rdeits/Library/hdf5-1.8.5-patch1-macosx64-static/bin:$LD_LIBRARY_PATH
 
-# ROS
-export ROS_OS_OVERRIDE=osxbrew:lion
-
 # RVM (ruby version manager)
 [[ -s "/Users/rdeits/.rvm/scripts/rvm" ]] && source "/Users/rdeits/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
@@ -105,7 +103,7 @@ function prompt_char {
 PROMPT='%{$fg_bold[green]%}%n@%m %{$fg[cyan]%}%2c %{$fg_bold[red]%}$(prompt_char) % %{$reset_color%}'
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-RPROMPT='$(vi_mode_prompt_info) ${return_code}  %{$fg_bold[blue]%}$(git_prompt_info) %{$fg_bold[green]%}%*%{$reset_color%}'
+RPROMPT='${return_code}  %{$fg_bold[blue]%}$(git_prompt_info) %{$fg_bold[green]%}%*%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
