@@ -8,5 +8,6 @@
     "translate_tabs_to_spaces": true,
 
     // Set to false to disable detection of tabs vs. spaces on load
-    "detect_indentation": false
+    "detect_indentation": false,
+    "trim_trailing_white_space_on_save": true
 }
