@@ -1,7 +1,8 @@
 {
-	"auto_upgrade_last_run": 1353911554,
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Git",
 		"GoSublime",
 		"LaTeXTools",
 		"OpenSearchResult",
