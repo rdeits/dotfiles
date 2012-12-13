@@ -11,6 +11,40 @@
 	<key>settings</key>
 	<array>
 		<dict>
+		  <key>name</key>
+		  <string>diff.deleted</string>
+		  <key>scope</key>
+		  <string>markup.deleted</string>
+		  <key>settings</key>
+		  <dict>
+		    <key>foreground</key>
+		    <string>#F92672</string>
+		  </dict>
+		</dict>
+		<dict>
+		  <key>name</key>
+		  <string>diff.inserted</string>
+		  <key>scope</key>
+		  <string>markup.inserted</string>
+		  <key>settings</key>
+		  <dict>
+		    <key>foreground</key>
+		    <!-- <string>#A6E22E</string> -->
+		    <string>#33CC33</string>
+		  </dict>
+		</dict>
+		<dict>
+		  <key>name</key>
+		  <string>diff.changed</string>
+		  <key>scope</key>
+		  <string>markup.changed</string>
+		  <key>settings</key>
+		  <dict>
+		    <key>foreground</key>
+		    <string>#967EFB</string>
+		  </dict>
+		</dict>
+		<dict>
 		    <key>name</key>
 		    <string>SublimeLinter Error Underline</string>
 		    <key>scope</key>
