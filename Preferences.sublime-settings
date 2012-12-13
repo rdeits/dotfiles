@@ -3,6 +3,7 @@
 	"auto_match_enabled": false,
 	"color_scheme": "Packages/User/Dawn-mod.tmTheme",
 	"detect_slow_plugins": false,
+	"git_gutter_live_mode": false,
 	"highlight_line": true,
 	"ignored_packages":
 	[

@@ -3,9 +3,11 @@
 	"installed_packages":
 	[
 		"Git",
+		"GitGutter",
 		"GoSublime",
 		"LaTeXTools",
 		"OpenSearchResult",
+		"Origami",
 		"Package Control",
 		"SideBarEnhancements",
 		"sublime-text-2-open-with-vim",
