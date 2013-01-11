@@ -46,6 +46,19 @@
 		</dict>
 		<dict>
 		    <key>name</key>
+		    <string>SublimeLinter Error Outline</string>
+		    <key>scope</key>
+		    <string>sublimelinter.outline.illegal</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#FF0000</string>
+		        <key>foreground</key>
+		        <string>#FFFFFF</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
 		    <string>SublimeLinter Error Underline</string>
 		    <key>scope</key>
 		    <string>sublimelinter.underline.illegal</string>
@@ -63,7 +76,7 @@
 		    <key>settings</key>
 		    <dict>
 		        <key>background</key>
-		        <string>#EFC400C0</string>
+		        <string>#EFC40090</string>
 		        <key>foreground</key>
 		        <string>#FFFFFF</string>
 		    </dict>
@@ -76,7 +89,7 @@
 		    <key>settings</key>
 		    <dict>
 		        <key>background</key>
-		        <string>#FF0000</string>
+		        <string>#EFC400</string>
 		    </dict>
 		</dict>
 		<dict>
