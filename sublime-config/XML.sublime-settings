@@ -7,7 +7,7 @@
 		"svg",
 		"world",
 		"sdf",
-		"launch"
+		"launch",
 		"urdf"
 	]
 }
