@@ -12,5 +12,6 @@
 	],
 	"open_files_in_new_window": false,
 	"show_full_path": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db"]
 }
