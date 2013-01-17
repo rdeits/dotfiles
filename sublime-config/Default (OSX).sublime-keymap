@@ -1,5 +1,9 @@
 [
 { "keys": ["super+shift+h"], "command": "goto_documentation" },
 { "keys": ["super+ctrl+e"], "command": "open_with_gvim" },
-{ "keys": ["super+shift+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true}}
+{ "keys": ["super+shift+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true}},
+{ "keys": ["alt+l"], "command": "travel_to_pane", "args": {"direction": "right"}},
+{ "keys": ["alt+k"], "command": "travel_to_pane", "args": {"direction": "up"}},
+{ "keys": ["alt+j"], "command": "travel_to_pane", "args": {"direction": "down"}},
+{ "keys": ["alt+h"], "command": "travel_to_pane", "args": {"direction": "left"}}
 ]

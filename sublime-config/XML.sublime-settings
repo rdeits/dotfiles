@@ -8,5 +8,6 @@
 		"world",
 		"sdf",
 		"launch"
+		"urdf"
 	]
 }
