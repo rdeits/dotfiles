@@ -8,7 +8,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Git",
 		"GitGutter"
 	],
 	"open_files_in_new_window": false,
