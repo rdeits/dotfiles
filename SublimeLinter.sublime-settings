@@ -1,3 +1,4 @@
 {
-	"sublimelinter": "load-save"
+	"sublimelinter": "load-save",
+    "pep8_ignore": ["E231", "E501", "E225", "E302"]
 }
