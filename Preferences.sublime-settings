@@ -1,12 +1,16 @@
 {
 	"auto_complete_commit_on_tab": true,
 	"auto_match_enabled": false,
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/Dawn-mod.tmTheme",
 	"detect_slow_plugins": false,
+	"git_gutter_live_mode": false,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"GitGutter"
 	],
 	"open_files_in_new_window": false,
+	"show_full_path": true,
 	"word_wrap": true
 }
