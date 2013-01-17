@@ -1,0 +1,12 @@
+{
+	"extensions":
+	[
+		"xml",
+		"xsd",
+		"xslt",
+		"svg",
+		"world",
+		"sdf",
+		"launch"
+	]
+}
