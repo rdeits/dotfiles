@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="flazz"
+# ZSH_THEME="mh"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -50,12 +51,17 @@ function prompt_char {
     echo '%(!.!.➜)'
 }
 
+function ssh_connection() {
+  if [[ -n $SSH_CONNECTION ]]; then
+    echo "%{$fg_bold[red]%}(ssh) "
+  fi
+}
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-PROMPT='%{$fg_bold[green]%}%n@%m %{$fg[cyan]%}%2c %{$fg_bold[red]%}$(prompt_char) % %{$reset_color%}'
+PROMPT='$(ssh_connection)%{$fg_bold[green]%}%n@%m %{$fg[cyan]%}%2c %{$fg_bold[red]%}$(prompt_char) % %{$reset_color%}'
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 RPROMPT='${return_code}  %{$fg_bold[blue]%}$(git_prompt_info) %{$fg_bold[green]%}%*%{$reset_color%}'
