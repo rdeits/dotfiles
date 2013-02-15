@@ -15,6 +15,7 @@
 		"sublime-text-2-open-with-vim",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SystemVerilog",
 		"WrapCode"
 	],
 	"repositories":
