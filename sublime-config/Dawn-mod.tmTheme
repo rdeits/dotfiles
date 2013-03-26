@@ -501,6 +501,58 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Markup.underline.internal.link.wiki</string>
+			<key>scope</key>
+			<string>markup.underline.link.internal.Wiki</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#234A97</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>markup.underline.link.external.Wiki</string>
+			<key>scope</key>
+			<string>markup.underline.link.external.Wiki</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#234A97</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>markup.underline.link.markdown</string>
+			<key>scope</key>
+			<string>markup.underline.link.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#234A97</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>markup.underline.link.image.markdown</string>
+			<key>scope</key>
+			<string>markup.underline.link.image.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#234A97</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Markup.raw</string>
 			<key>scope</key>
 			<string>markup.raw</string>
