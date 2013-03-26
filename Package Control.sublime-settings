@@ -2,10 +2,12 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"AAAPackageDev",
 		"Git",
 		"GitGutter",
 		"GoSublime",
 		"LaTeXTools",
+		"LiveReload",
 		"Markdown Preview",
 		"Missing Palette Commands",
 		"OpenSearchResult",
@@ -15,10 +17,12 @@
 		"sublime-text-2-open-with-vim",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"Wiki",
 		"WrapCode"
 	],
 	"repositories":
 	[
+		"https://github.com/rdeits/SublimeWiki.git",
 		"https://github.com/abrookins/WrapCode",
 		"https://github.com/abrookins/OpenSearchResult",
 		"https://github.com/rdeits/sublime-text-2-open-with-vim"
