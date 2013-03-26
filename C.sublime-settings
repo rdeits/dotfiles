@@ -1,6 +1,7 @@
 {
-    "extensions":
-    [
-        "pde"
-    ]
+	"extensions":
+	[
+		"pde",
+		"lcm"
+	]
 }
