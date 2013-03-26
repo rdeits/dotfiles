@@ -55,7 +55,8 @@ function git_prompt_info() {
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-PROMPT='%{$fg_bold[green]%}%n@%m %{$fg[cyan]%}%2c %{$fg_bold[red]%}$(prompt_char) % %{$reset_color%}'
+PROMPT='%{$fg_bold[green]%}%n@%m: %{$fg[cyan]%}%~
+%{$fg_bold[red]%}$(prompt_char) % %{$reset_color%}'
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 RPROMPT='${return_code}  %{$fg_bold[blue]%}$(git_prompt_info) %{$fg_bold[green]%}%*%{$reset_color%}'
