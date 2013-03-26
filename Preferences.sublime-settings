@@ -25,10 +25,12 @@
 		"*.psd",
 		"*.db"
 	],
+	"font_size": 12.0,
 	"git_gutter_live_mode": false,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Git",
 		"GitGutter"
 	],
 	"open_files_in_new_window": false,
