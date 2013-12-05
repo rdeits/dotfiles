@@ -3,6 +3,8 @@
 	"installed_packages":
 	[
 		"AAAPackageDev",
+		"BufferScroll",
+		"CMake",
 		"Git",
 		"GitGutter",
 		"GoSublime",
@@ -17,7 +19,10 @@
 		"sublime-text-2-open-with-vim",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeREPL",
+		"Switch File Deluxe",
 		"SystemVerilog",
+		"Table Editor",
 		"Wiki",
 		"WrapCode"
 	],
