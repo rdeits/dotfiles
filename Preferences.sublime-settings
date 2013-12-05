@@ -26,7 +26,6 @@
 		"*.psd",
 		"*.db"
 	],
-	"font_size": 10,
 	"git_gutter_live_mode": false,
 	"highlight_line": true,
 	"ignored_packages":
