@@ -3,3 +3,5 @@ GoSublime/
 GoSublime-aux*
 Package\ Control.last-run
 Side Bar.sublime-settings
+*.cache
+.SublimeREPLHistory
