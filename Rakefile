@@ -1,6 +1,6 @@
 require 'rake/clean'
 
-CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc', 'zshrc', '/.config/sublime-text-2/Packages/User'].pathmap("#{ENV['HOME']}/.%p")
+CLEAN.include FileList['inputrc', 'screenrc', 'tmux.conf', 'gitconfig', 'vim', 'vimrc', 'gvimrc', 'bash_profile', 'bashrc', 'zshrc', '/.config/sublime-text-3/Packages/User'].pathmap("#{ENV['HOME']}/.%p")
 
 desc "Install oh-my-zsh from github"
 task :zsh do
@@ -19,8 +19,9 @@ task :link do
 		link_file("sublime-config", "Library/Application Support/sublime text 2/packages/User")
 	elsif RUBY_PLATFORM.include? "linux"
 		link_file("bashrc_linux", ".bashrc")
-		if File.exist? File.join(ENV['HOME'], ".config/sublime-text-2")
-			link_file("sublime-config", ".config/sublime-text-2/Packages/User")
+		if File.exist? File.join(ENV['HOME'], ".config/sublime-text-3")
+			link_file("sublime-config", ".config/sublime-text-3/Packages/User")
+
 		end
 	end
 end

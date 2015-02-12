@@ -1,12 +1,12 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"AAAPackageDev",
-		"BufferScroll",
 		"CMake",
-		"Git",
-		"GitGutter",
 		"GoSublime",
 		"LaTeXTools",
 		"LiveReload",
@@ -15,15 +15,18 @@
 		"OpenSearchResult",
 		"Origami",
 		"Package Control",
+		"Sass",
 		"SideBarEnhancements",
 		"sublime-text-2-open-with-vim",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pyflakes",
 		"SublimeREPL",
 		"Switch File Deluxe",
 		"SystemVerilog",
 		"Table Editor",
-		"Wiki",
+		"Vintage-Origami",
 		"WrapCode"
 	],
 	"repositories":

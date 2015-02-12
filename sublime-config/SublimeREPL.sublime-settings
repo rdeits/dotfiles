@@ -1,0 +1,8 @@
+{
+
+	// default_extend_env are used to augment any environment variables
+	// that should be visible for all subprocess repls launched within
+	// SublimeREPL. This is a very good place to add PATH extension
+	// once "PATH": "{PATH}:/home/username/mylocalinstalls/bin" or whatever
+	"default_extend_env": {"DRC_BASE": "/home/rdeits/drc", "PYTHONPATH": "{PYTHONPATH}:/home/rdeits/drc/software/build/lib/python2.7/site-packages:/home/rdeits/drc/software/build/lib/python2.7/dist-packages"}
+}

@@ -1,3 +1,4 @@
+source $HOME/drc/software/config/drc_environment.sh
 export PS1="\[\e[0;32m\]\u@\h: \w\n\[\e[0m\]$ \[\033]0;\W\007\]"
 alias open='xdg-open >/dev/null 2>&1'
 function gvim () { (/usr/bin/gvim -f "$@" &) }
