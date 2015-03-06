@@ -42,7 +42,10 @@ unsetopt correctall
 export EDITOR="vim"
 
 ############################# Python #############################
-alias ipynb='ipython notebook --pylab inline'
+alias ipynb='ipython notebook'
+
+############################# Drake ##############################
+alias ddapp-viewer='ddConsoleApp -m ddapp.drakevisualizer'
 
 
 ############################# zsh #############################
