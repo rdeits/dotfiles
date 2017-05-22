@@ -87,14 +87,6 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
 " gist-vim defaults
 if has("mac")
   let g:gist_clip_command = 'pbcopy'
@@ -204,60 +196,6 @@ endif
 " Convert outline format to LaTeX
 command Texify !python $HOME/.vim/scripts/texify.py % 
 
-" Calculate the number of screen lines needed to display a file with folds at
-" the given fold_level. This is used to set the initial fold level of a file
-" in order to display the entire file on screen if possible without closing
-" any unnecessary folds.
-function! ScreenLines(fold_level)
-	let line_num = 1
-	let screen_lines = 0
-	let prev_fold_level = 0
-	let cur_fold_level = 0
-	let buf_length = line("$")
-	while line_num <= buf_length
-		let fold_expr = foldlevel(line_num)
-		let prev_fold_level = cur_fold_level
-		let cur_fold_level = fold_expr
-		if (cur_fold_level <= a:fold_level) || ((cur_fold_level != prev_fold_level) && (prev_fold_level <= a:fold_level))
- 			let screen_lines = screen_lines + 1
-		endif
-	    let line_num = line_num+1
-   endwhile
-   return screen_lines
-endfunction
-
-" Increase the fold level until the entire file will fit on the screen or
-" foldlevel reaches 10, whichever comes first. 
-function! FoldToScreen()
-	let ndx = 0
-	set foldlevel=0
-	while ndx < 10
-		let ndx = ndx + 1
-		if ScreenLines(ndx) > &lines
-			break
-		endif
-		set foldlevel+=1
-	endwhile
-endfunction
-
-" autocmd BufWinEnter * call FoldToScreen()
-
-" " Configuration for vim-latex
-" " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" " can be called correctly.
-set shellslash
-" 
-" " IMPORTANT: grep will sometimes skip displaying the file name if you
-" " search in a singe file. This will confuse Latex-Suite. Set your grep
-" " program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-" 
-" " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" " The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-let g:Tex_ViewRule_pdf = 'Skim'
-
 noremap <C-left> :call PrevBuffer()<CR>
 noremap <C-right> :call NextBuffer()<CR>
 
@@ -335,25 +273,6 @@ if has("mouse")
 	set mouse=a
 endif
 
-" Tagbar customizatoin
-nmap <F8> :TagbarToggle<CR>
-let g:tagbar_expand=1
-
-let g:tagbar_type_tex = {
-	\ 'ctagstype' : 'latex',
-	\ 'kinds'     : [
-		\ 's:sections',
-		\ 't:subsections',
-		\ 'u:subsubsections',
-		\ 'g:graphics',
-		\ 'l:labels',
-		\ 'r:refs:1',
-		\ 'p:pagerefs:1'
-	\ ],
-	\ 'sort'    : 0,
-	\ 'deffile' : '$HOME/.vim/latex-ctags.cnf'
-\ }
-
 " Supertab configuration
 let g:SuperTabDefaultCompletionType="context"
 " set completeopt=longest,menuone,preview
@@ -385,20 +304,6 @@ map <leader><leader> :CtrlPMRU<CR>
 let g:ctrlp_extensions = ['dir']
 map <leader>. :CtrlPDir<CR>
 
-" Python Mode config
-" if !has("python")
-"     let g:pymode = 0
-" endif
-" let g:pymode_lint_cwindow = 1
-" let g:pymode_lint_message = 0
-" let g:pymode_lint_write = 0
-" let g:pymode_lint_jump = 1
-" let g:pymode_breakpoint_key = '<leader>br'
-" let g:pymode_options_other = 0
-" let g:pymode_doc_key = 'K'
-" map <C-K> :RopeShowDoc<CR>
-" map <leader>q :PyLint<CR>
-
 " Faster window switching
 map <M-j> :wincmd j<CR>
 map <M-h> :wincmd h<CR>
@@ -406,15 +311,6 @@ map <M-k> :wincmd k<CR>
 map <M-l> :wincmd l<CR>
 
 " set statusline=%<%f\ %h%m%r\ %{fugitive#statusline()}\ %=%-14.(%l,%c%V%)\ %p%%
-
-" Command to do latexmk on a file
-function LatexmkTerminal()
-	let @@ = "cd " . expand("%:p:h") . "; latexmk -pvc -pdf " . expand("%:t")
-	ConqueTermSplit bash
-	resize 10
-	normal ""p
-endfunc
-command Latexmk call LatexmkTerminal() 
 
 map <M-/> <plug>NERDCommenterToggle<CR>
 imap <M-/> <Esc><plug>NERDCommenterToggle<CR>i
